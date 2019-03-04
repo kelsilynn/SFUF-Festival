@@ -37,6 +37,16 @@ body {
 	border-bottom: 3px solid #fff;
 }
 
+.navbar-light .navbar-toggler {
+    color: #fff;
+    border: none;
+    filter: invert(100%);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+}
+
 .bg-light {
 	background: rgba(0,79,32,.9) !important;	
 }
@@ -162,6 +172,7 @@ header {
 .row-1 {
 	background: #000;
 	display: flex;
+	border-bottom: 3px solid #fff;
 }
 
 .logo {
@@ -188,21 +199,29 @@ header {
 }
 
 .row-2 {
-	background: #0E3144; 	
+	background: #031D2C; 	
 	margin: 3% 0;
+	border-bottom: 3px solid #fff;
+	border-top: 3px solid #fff;
 }
 
 .video {
-	padding: 2%;
+	padding: 3% 2%;
 	margin: 0 auto;
 	text-align: center;
-	border-bottom: 3px solid #fff;
+	opacity: 0;
+
 }
 
 .video-title {
 	font-size: 2.2em;
 	margin: 0 0 2% 0;
 	color: #B5C5CE;
+}
+
+.yt-video {
+	width: 560px;
+	height: 315px; 
 }
 
 .flex-container {
@@ -320,7 +339,6 @@ header {
 	background: linear-gradient(#ff7f4b 30%, #ffd88c);
 	background-size: 100%;
 	position: relative;
-	/*background-repeat: no-repeat;*/
 	height: 250px;
 	color: #000;
 	border-top: 3px solid #fff;
@@ -356,11 +374,11 @@ header {
 .copyright {
 	font-size: .8em;
 	margin-top: 5px;
-
 }
 
 .soc-med-icons {
 	margin-top: 5px;
+	z-index: 100;
 }
 
 .fab {
@@ -372,10 +390,14 @@ header {
 	color: rgba(0,0,0,0.8);
 }
 
-#footer-trees {
-	max-width: 100%;
+.footer-bg {
+	background-image: url("../images/footer-trees-6.png");
+	background-position: bottom;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
 	position: absolute;
-	bottom: 0;
 }
 
 /*--------------------------------------------------------------
@@ -397,11 +419,43 @@ header {
 	.box-7 {
 		border-right: none;
 	}
+
+	.footer-bg {
+		background-size: 150%;
+	}
 }
 
 @media only screen and (max-width: 768px) {
+	.video-title {
+		font-size: 1.5em;
+	}
+
+	.row-1 {
+		display: block;
+		padding: 2%;
+	}
+
+	.logo {
+		width: 100%;
+		text-align: center;
+	}
+
+	.quote h1 {
+		font-size: 1.6em;
+		margin: 1.5rem 0;
+	}
+
+	.yt-video {
+		width: 380px;
+		height: 214px;
+	}
+
 	.fab {
 		margin: 0 2%;
+	}
+
+	.footer-bg {
+		background-size: 200%;
 	}
 }
 

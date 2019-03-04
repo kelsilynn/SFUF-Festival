@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:400,700|Raleway:400,500,700|Amatic+SC:700">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
 	<script type="text/javascript">
 		
@@ -25,11 +25,39 @@
 				$(window).scroll(function() {
 					var scrollPos = $(this).scrollTop();
 					$("header").css({
-						'background-size' : 100 + scrollPos/15 + '%'
+						'background-size' : 100 + scrollPos/30 + '%'
 					});
 				});
 		    }
 		}
+
+		$(function(){  // $(document).ready shorthand
+		  $('.row-2').fadeIn('slow');
+		});
+
+		$(document).ready(function() {
+		    
+		    /* Every time the window is scrolled ... */
+		    $(window).scroll( function(){
+		    
+		        /* Check the location of each desired element */
+		        $('.video').each( function(i){
+		            
+		            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+		            var bottom_of_window = $(window).scrollTop() + $(window).height();
+		            
+		            /* If the object is completely visible in the window, fade it it */
+		            if( bottom_of_window > bottom_of_object ){
+		                
+		                $(this).animate({'opacity':'1'},1000);
+		                    
+		            }
+		            
+		        }); 
+		    
+		    });
+		    
+		});
 
 	</script>
 
@@ -105,7 +133,7 @@
 				<div class="row-2">
 					<div class="video">
 						<h1 class="video-title">SFUF Music Festival 2017 Footage</h1>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/9cWSWZK2eg0?controls=0?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe src="https://www.youtube.com/embed/9cWSWZK2eg0?controls=0?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="yt-video"></iframe>
 					</div>
 				</div>
 			</div>
@@ -182,12 +210,13 @@
 
 
 	<footer class="site-footer">
-		<div class="site-info">
-			<span class="footer-links"><a href="index.html">Home</a> | <a href="event-information.html">Event Info</a> | <a href="our-story.html">Our Story</a> | <a href="gallery.html">Gallery</a> | <a href="sponsors.html">Sponsors</a> | <a href="contact.html">Contact</a></span>
-			<span class="copyright">Copyright © 2019 Uprising Festival</span>
-			<span class="soc-med-icons"><a href="https://www.facebook.com/SpiritualFamilyUniversalFriends" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://www.instagram.com/uprising.fest/" target="_blank"><i class="fab fa-instagram"></i></a></span>
-		</div><!-- .site-info -->
-		<img src="images/footer-trees-6.png" id="footer-trees">
+		<div class="footer-bg">
+			<div class="site-info">
+				<span class="footer-links"><a href="index.html">Home</a> | <a href="event-information.html">Event Info</a> | <a href="our-story.html">Our Story</a> | <a href="gallery.html">Gallery</a> | <a href="sponsors.html">Sponsors</a> | <a href="contact.html">Contact</a></span>
+				<span class="copyright">Copyright © 2019 Uprising Festival</span>
+				<span class="soc-med-icons"><a href="https://www.facebook.com/SpiritualFamilyUniversalFriends" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://www.instagram.com/uprising.fest/" target="_blank"><i class="fab fa-instagram"></i></a></span>
+			</div><!-- .site-info -->
+		</div>
 	</footer>
 
 
