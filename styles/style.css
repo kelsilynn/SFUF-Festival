@@ -325,6 +325,7 @@ header {
 
 .contact-content {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .contact-left,
@@ -493,6 +494,10 @@ header {
 	.fab {
 		margin: 0 2%;
 	}
+	
+	.contact-left,
+	.contact-right {
+		flex: 1 100%;
 
 	.footer-bg {
 		background-size: 200%;
