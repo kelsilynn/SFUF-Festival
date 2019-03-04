@@ -351,9 +351,20 @@ header {
 
 .contact-buttons {
 	text-align: center;
+}
+
+.contact-buttons input {
 	background: #000;
 	color: #fff;
 	border: 1px solid #fff;
+}
+
+.contact-buttons input:hover {
+	background: #505050;
+}
+
+.contact-buttons input:active {
+	background: #303030;
 }
 
 .contact-right i {
