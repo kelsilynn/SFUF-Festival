@@ -21,7 +21,7 @@
 
 		//Function to the css rule
 		function checkSize(){
-		    if ($(".footer-bg").css("background-size") == "150%"){
+		    if ($(".footer-bg").css("background-size") == "contain"){
 				$(window).scroll(function() {
 					var scrollPos = $(this).scrollTop();
 					$("header").css({
