@@ -32,7 +32,7 @@
 		}
 
 		$(function(){  // $(document).ready shorthand
-		  $('.row-2').fadeIn('slow');
+		  $('.video').fadeIn('slow');
 		});
 
 		$(document).ready(function() {
@@ -41,7 +41,7 @@
 		    $(window).scroll( function(){
 		    
 		        /* Check the location of each desired element */
-		        $('.video').each( function(i){
+		        $('.yt-video').each( function(i){
 		            
 		            var bottom_of_object = $(this).position().top + $(this).outerHeight();
 		            var bottom_of_window = $(window).scrollTop() + $(window).height();
@@ -99,7 +99,7 @@
 		        <a class="nav-link" href="#">Sponsorships</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Contact Us</a>
+		        <a class="nav-link" href="contact.html">Contact Us</a>
 		      </li>
 		      </li>
 		    </ul>
@@ -208,7 +208,6 @@
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-
 	<footer class="site-footer">
 		<div class="footer-bg">
 			<div class="site-info">
@@ -218,7 +217,6 @@
 			</div><!-- .site-info -->
 		</div>
 	</footer>
-
 
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>

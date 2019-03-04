@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact Us</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:400,700|Raleway:400,500,700|Amatic+SC:700">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+		    // run test on initial page load
+		    checkSize();
+
+		    // run test on resize of the window
+		    $(window).resize(checkSize);
+		});
+
+		//Function to the css rule
+		function checkSize(){
+		    if ($(".contact-header").css("background-size") == "100%"){
+				$(window).scroll(function() {
+					var scrollPos = $(this).scrollTop();
+					$("header").css({
+						'background-size' : 100 + scrollPos/15 + '%'
+					});
+				});
+		    }
+		}
+
+	</script>
+</head>
+<body>
+
+
+	<header class="contact-header">
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- 		  <a class="navbar-brand" href="#"><img src="images/sfuf-white.png" id="nav-logo"></a> -->
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="index.html">Home</a>
+		      </li>
+		      <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Event Information
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="#">General Info</a>
+		          <a class="dropdown-item" href="#">Health & Safety</a>
+		          <a class="dropdown-item" href="#">Participant Agreement</a>
+		          <a class="dropdown-item" href="#">Vendor App</a>
+		        </div>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="our-story.html">Our Story</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Gallery</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Sponsorships</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="contact.html">Contact Us <span class="sr-only">(current)</span></a>
+		      </li>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
+
+		<div class="header-content">
+			<h1>Contact Us</h1>
+		</div>
+	</header>
+
+	<div id="primary">
+		<main id="main" class="site-main">
+
+			<div class="main-content">
+
+				<div class="page-content contact-content">
+					<div class="contact-left">
+						<form action="mailto:kelsistez@gmail.com" method="post" enctype="text/plain">
+							<input type="text" name="name" size="31" placeholder="Name"><br>
+							<input type="text" name="email" size="31" placeholder="Email"><br>
+							<textarea name="comment" rows="4" cols="30" placeholder="Type message here"></textarea><br>
+							<div class="contact-buttons">
+								<input type="submit" value="Send">
+								<input type="reset" value="Reset">
+							</div>
+						</form>
+					</div>
+					<div class="contact-right">
+						<p><i class="fas fa-phone"></i> 425-555-5555</p>
+						<p><i class="fas fa-envelope"></i> email@address.com</p>
+						<p><i class="fas fa-map-marker-alt"></i> 1234 5th Ave NE, Arlington WA 98222</p>
+					</div>
+				</div>
+			</div>
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	<footer class="site-footer">
+		<div class="footer-bg">
+			<div class="site-info">
+				<span class="footer-links"><a href="index.html">Home</a> | <a href="event-information.html">Event Info</a> | <a href="our-story.html">Our Story</a> | <a href="gallery.html">Gallery</a> | <a href="sponsors.html">Sponsors</a> | <a href="contact.html">Contact</a></span>
+				<span class="copyright">Copyright © 2019 Uprising Festival</span>
+				<span class="soc-med-icons"><a href="https://www.facebook.com/SpiritualFamilyUniversalFriends" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://www.instagram.com/uprising.fest/" target="_blank"><i class="fab fa-instagram"></i></a></span>
+			</div><!-- .site-info -->
+		</div>
+	</footer>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
