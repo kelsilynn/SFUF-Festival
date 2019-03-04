@@ -444,7 +444,8 @@ header {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 992px) {
 	.index-header,
-	.page-header {
+	.about-header,
+	.contact-header {
 		background-size: cover;
 	}
 
