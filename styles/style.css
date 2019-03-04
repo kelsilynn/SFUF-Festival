@@ -374,6 +374,7 @@ header {
 
 .contact-info {
 	margin: 0 auto;
+	width: fit-content;
 }
 
 /*--------------------------------------------------------------
