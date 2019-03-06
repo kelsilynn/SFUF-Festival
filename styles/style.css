@@ -11,7 +11,6 @@ body {
 	outline: none;
 }
 
-
 h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
@@ -21,6 +20,16 @@ h1 {
 
 a {
 	cursor: pointer;
+}
+
+::selection {
+  background: #26854C;
+  color: #101010;
+}
+
+::-moz-selection {
+  background: #26854C;
+  color: #101010;
 }
 
 /*--------------------------------------------------------------
@@ -180,7 +189,7 @@ header {
 
 .quote {
 	flex: 1 80%;
-	padding: 2%;
+	padding: 5% 2%;
 	align-items: center;
 	align-self: center;
 }
@@ -190,14 +199,15 @@ header {
 }
 
 .row-2 {
-	background: #031D2C; 	
+	background-color: #031D2C;
+	background-image: linear-gradient(to bottom right, #0E3044, #011018);
 	margin: 3% 0;
 	border-bottom: 3px solid #fff;
 	border-top: 3px solid #fff;
 }
 
 .video {
-	padding: 3% 2%;
+	padding: 5% 2%;
 	margin: 0 auto;
 	text-align: center;
 
@@ -213,6 +223,7 @@ header {
 	width: 560px;
 	height: 315px;
 	opacity: 0;
+	border: 3px solid #fff;
 }
 
 .flex-container {
@@ -271,15 +282,21 @@ header {
 
 .overlay {
 	position: absolute;
-	background: rgba(0,0,0,0.5);
+	background: rgba(0,0,0,0.3);
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
+	transition: ease .3s;
+}
+
+.overlay:hover {
+	background: rgba(0,0,0,0.5);
 }
 
 .box-content h2 {
 	margin-top: 0;
+	text-shadow: 2px 1px 4px rgba(0,0,0,0.8);
 }
 
 .box-content {
@@ -325,6 +342,7 @@ header {
 
 .contact-content {
 	display: flex;
+	flex: flex-wrap;
 }
 
 .contact-left,
@@ -353,8 +371,27 @@ header {
 	text-align: center;
 }
 
+.contact-buttons input {
+	background: #000;
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+.contact-buttons input:hover {
+	background: #505050;
+}
+
+.contact-buttons input:active {
+	background: #303030;
+}
+
 .contact-right i {
 	margin: 2%;
+}
+
+.contact-info {
+	margin: 0 auto;
+	width: fit-content;
 }
 
 /*--------------------------------------------------------------
@@ -430,8 +467,10 @@ header {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 992px) {
 	.index-header,
-	.page-header {
+	.about-header,
+	.contact-header {
 		background-size: cover;
+		/*background-attachment: fixed;*/
 	}
 
 	.box {
@@ -451,8 +490,14 @@ header {
 }
 
 @media only screen and (max-width: 768px) {
-	.video-title {
-		font-size: 1.5em;
+	.header-content {
+		margin-top: 10vh;
+		height: 30vh;
+	}
+
+	.index-header .header-content {
+		margin-top: 5vh;
+		height: 50vh;
 	}
 
 	.row-1 {
@@ -463,6 +508,10 @@ header {
 	.logo {
 		width: 100%;
 		text-align: center;
+	}
+
+	#logo {
+		max-width: 150px;
 	}
 
 	.quote h1 {
@@ -478,6 +527,10 @@ header {
 	.fab {
 		margin: 0 2%;
 	}
+
+	.contact-left,
+	.contact-right {
+		flex: 1 100%;
 
 	.footer-bg {
 		background-size: 200%;
@@ -499,5 +552,20 @@ header {
 	}
 }
 
+@media (min-width: 778px) {
+	@keyframes zoominoutvideo {
+	    0% {
+	        transform: scale(1,1);
+	    }
+	    50% {
+	        transform: scale(1.05,1.05);
+	    }
+	    100% {
+	        transform: scale(1,1);
+	    }
+	}
 
-
+	.yt-video:hover {
+		animation: zoominoutvideo .5s forwards;
+	}
+}

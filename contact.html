@@ -7,30 +7,6 @@
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:400,700|Raleway:400,500,700|Amatic+SC:700">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script type="text/javascript">
-		
-		$(document).ready(function() {
-		    // run test on initial page load
-		    checkSize();
-
-		    // run test on resize of the window
-		    $(window).resize(checkSize);
-		});
-
-		//Function to the css rule
-		function checkSize(){
-		    if ($(".contact-header").css("background-size") == "100%"){
-				$(window).scroll(function() {
-					var scrollPos = $(this).scrollTop();
-					$("header").css({
-						'background-size' : 100 + scrollPos/15 + '%'
-					});
-				});
-		    }
-		}
-
-	</script>
 </head>
 <body>
 
@@ -87,6 +63,13 @@
 			<div class="main-content">
 
 				<div class="page-content contact-content">
+					<div class="contact-right">
+						<div class="contact-info">
+							<p><i class="fas fa-phone"></i> 425-555-5555</p>
+							<p><i class="fas fa-envelope"></i> email@address.com</p>
+							<p><i class="fas fa-map-marker-alt"></i> 1234 5th Ave NE, Arlington WA 98222</p>
+						</div>
+					</div>
 					<div class="contact-left">
 						<form action="mailto:kelsistez@gmail.com" method="post" enctype="text/plain">
 							<input type="text" name="name" size="31" placeholder="Name"><br>
@@ -97,11 +80,6 @@
 								<input type="reset" value="Reset">
 							</div>
 						</form>
-					</div>
-					<div class="contact-right">
-						<p><i class="fas fa-phone"></i> 425-555-5555</p>
-						<p><i class="fas fa-envelope"></i> email@address.com</p>
-						<p><i class="fas fa-map-marker-alt"></i> 1234 5th Ave NE, Arlington WA 98222</p>
 					</div>
 				</div>
 			</div>
@@ -120,5 +98,7 @@
 	</footer>
 
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
 </body>
 </html>
