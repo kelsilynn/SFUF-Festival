@@ -1,6 +1,10 @@
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+* {
+	box-sizing: border-box;
+}
+
 html {
 	line-height: 1.15; /* 1 */
 	-webkit-text-size-adjust: 100%; /* 2 */
@@ -35,62 +39,133 @@ a {
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
+
 body {
-	background-image: url("../images/noah-silliman-155839-unsplash-1.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
 }
 
-.navbar {
-	border-bottom: 3px solid #fff;
-}
-
-.navbar-light .navbar-toggler {
-    color: #fff;
-    border: none;
-    filter: invert(100%);
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: #fff;
-}
-
-.bg-light {
-	background: rgba(0,79,32,.9) !important;	
-}
-
-.dropdown-menu {
-	background: #006F2D;
-}
-
-.dropdown-menu a {
-	color: #fff;
-	transition: .2s;
-	-webkit-transition: .2s;
-}
-
+.index-body,
 .index-header {
-	background: url("../images/noah-silliman-155839-unsplash-1.jpg") no-repeat;
-	background-size: 100%;
-	background-position: bottom center; 
+	background-image: url("../images/noah-silliman-155839-unsplash-1600.jpg");
 }
 
+.about-body,
 .about-header {
-	background: url("../images/daniel-mingook-kim-139409-unsplash.jpg") no-repeat;
-	background-size: 100%;
-	background-position: center bottom;
+	background-image: url("../images/story-header.jpg");
 }
 
+.contact-body,
 .contact-header {
-	background: url("../images/pavan-trikutam-1660-unsplash.jpg") no-repeat;
-	background-size: 100%;
-	background-position: center bottom;
+	background-image: url("../images/contact-header.jpg");
 }
 
-header {
-/*	background: url("../images/noah-silliman-155839-unsplash-1.jpg") no-repeat 50% 50%;
-	/*background-size: cover;*/
+.event-body,
+.event-header {
+	background-image: url("../images/event-info-header.jpg");
+}
+
+.health-body,
+.health-header {
+	background-image: url("../images/health-safety-header.jpg");
+}
+
+.participant-body,
+.participant-header {
+	background-image: url("../images/participant-header.jpg");
+}
+
+.vendor-body,
+.vendor-header {
+	background-image: url("../images/vendor-header.jpg");
+}
+
+.sponsors-body,
+.sponsors-header {
+	background-image: url("../images/sponsors-header.jpg");
+}
+
+.gallery-body,
+.gallery-header {
+	background-image: url("../images/gallery-header.jpg");
+}
+
+.index-header,
+.about-header,
+.contact-header,
+.event-header,
+.health-header,
+.participant-header,
+.vendor-header,
+.sponsors-header,
+.gallery-header {
+	background-position: center; 
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+nav {
+	background: rgb(0,79,32);
+	border-bottom: 3px solid #fff;
+	text-transform: uppercase;
+	font-family: 'Raleway', sans-serif;
+}
+
+nav a {
+	cursor: pointer;
+}
+
+.fa-bars {
+	margin: 2%;
+	font-size: 1.5em;
+	color: #fff;
+	cursor: pointer;
+}
+
+.site-nav {
+	height: 0px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.site-nav-open {
+	height: auto;
+}
+
+.top-level a,
+.event-info li a {
+	list-style-type: none;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.top-level:last-child a {
+	border-bottom: none;
+}
+
+.top-level a {
+	color: #fff;
+	display: block;
+	padding: 1em 5%;
+	margin: 0 5%;
+	text-decoration: none;
+}
+
+.top-level a:hover {
+	background: #072704;
+	color: #fff;
+}
+
+.site-nav li ul {
+	list-style-type: none;
+}
+
+
+@media (min-width: 992px) {
+
+	
+
 }
 
 .header-content {
@@ -105,7 +180,7 @@ header {
 	font-family: 'Amatic SC', sans-serif;
 	font-size: 5em;
 	margin-top: 10%;
-	text-shadow: 4px 2px 10px rgba(0,0,0,0.8);
+	text-shadow: 4px 2px 6px rgba(0,0,0,1);
 }
 
 .header-img {
@@ -211,12 +286,13 @@ header {
 	margin: 0 auto;
 	text-align: center;
 
-}
+} 
 
 .video-title {
-	font-size: 2.2em;
+	font-size: 2em;
 	margin: 0 0 2% 0;
 	color: #B5C5CE;
+	text-transform: uppercase;
 }
 
 .yt-video {
@@ -245,39 +321,39 @@ header {
 }
 
 .box-1 {
-	background-image: url("../images/noiseporn-247586-unsplash.jpg");
+	background-image: url("../images/event-info.jpg");
 	border-right: 3px solid #fff;
 }
 
 .box-2 {
-	background-image: url("../images/simon-maage-706908-unsplash.jpg");
+	background-image: url("../images/our-story.jpg");
 }
 
 .box-3 {
-	background-image: url("../images/photo-1493676304819-0d7a8d026dcf.jpeg");
+	background-image: url("../images/pics-vids.jpg");
 	border-right: 3px solid #fff;
 }
 
 .box-4 {
-	background-image: url("../images/photo-1474500509889-915dbf0f966a.jpeg");
+	background-image: url("../images/vendor-app.jpg");
 }
 
 .box-5 {
-	background-image: url("../images/photo-1529182856268-587c45053e0f.jpeg");
+	background-image: url("../images/participant-agreement.jpg");
 	border-right: 3px solid #fff;
 }
 
 .box-6 {
-	background-image: url("../images/photo-1520483691742-bada60a1edd6.jpeg");
+	background-image: url("../images/health-safety.jpg");
 }
 
 .box-7 {
-	background-image: url("../images/photo-1501281668745-f7f57925c3b4.jpeg");
+	background-image: url("../images/sponsorships.jpg");
 	border-right: 3px solid #fff;
 }
 
 .box-8 {
-	background-image: url("../images/photo-1506157999258-a35364384ce9.jpeg");
+	background-image: url("../images/contact-2.jpg");
 }
 
 .overlay {
@@ -296,7 +372,10 @@ header {
 
 .box-content h2 {
 	margin-top: 0;
-	text-shadow: 2px 1px 4px rgba(0,0,0,0.8);
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.9);
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	font-size: 2em;
 }
 
 .box-content {
@@ -331,7 +410,7 @@ header {
 .page-content {
 	background: #000;
 	width: 100%;
-	padding: 10% 0;
+	padding: 10% 2%;
 	border-bottom: 3px solid #fff;
 }
 
@@ -351,20 +430,33 @@ header {
 	padding: 0 2%;
 }
 
-.contact-left form {
-	max-width: 300px;
+.contact-right form {
+	max-width: 350px;
 	margin: 0 auto;
 }
 
-.contact-left input,
-.contact-left textarea {
+.contact-right input[type='text'],
+.contact-right textarea,
+.contact-buttons input[type='submit'],
+.contact-buttons input[type='reset'] {
+	font-size: 1.3em;
+}
+
+.contact-buttons input[type='submit'],
+.contact-buttons input[type='reset'] {
+	cursor: pointer;
+	padding: 2% 3%;
+}
+
+.contact-right input,
+.contact-right textarea {
 	margin: 2%;
-	padding: 1% 2%;
+	padding: 2% 2%;
 	border-radius: 5px;
 	outline: none;
-	background: #f5f5f5;
+	background: #000;
 	border: 1px solid #c8c8c8;
-	color: rgb(0,79,32);
+	color: #fff;
 }
 
 .contact-buttons {
@@ -385,13 +477,14 @@ header {
 	background: #303030;
 }
 
-.contact-right i {
+.contact-left i {
 	margin: 2%;
 }
 
 .contact-info {
 	margin: 0 auto;
-	width: fit-content;
+	font-size: 1.2em;
+	max-width: 400px;
 }
 
 /*--------------------------------------------------------------
@@ -403,7 +496,7 @@ header {
 	position: relative;
 	height: 250px;
 	color: #000;
-	border-top: 2px solid #fff;
+	border-top: 3px solid #fff;
 }
 
 .site-info {
@@ -435,7 +528,7 @@ header {
 
 .copyright {
 	font-size: .8em;
-	margin-top: 5px;
+	margin-top: 8px;
 }
 
 .soc-med-icons {
@@ -470,7 +563,6 @@ header {
 	.about-header,
 	.contact-header {
 		background-size: cover;
-		/*background-attachment: fixed;*/
 	}
 
 	.box {
@@ -531,6 +623,11 @@ header {
 	.contact-left,
 	.contact-right {
 		flex: 1 100%;
+		margin: 0 auto;
+	}
+
+	.contact-right {
+		margin-top: 5%;
 	}
 
 	.footer-bg {
@@ -539,17 +636,59 @@ header {
 }
 
 @media (min-width: 992px) {
-	.navbar-expand-lg .navbar-nav .nav-link {
-		margin: 0 20px;
+	nav {
+		background: rgba(0,79,32,.9);
+		height: 50px;
+		text-align: center;
 	}
-	.mr-auto {
-		margin: 0 auto;
+
+	.fa-bars {
+		margin: 0;
+		visibility: hidden;
 	}
-	.navbar-light .navbar-nav .nav-link,
-	.navbar-light .navbar-nav .active>.nav-link {
-		color: #fff;
-		transition: .3s;
-		-webkit-transition: .3s;
+
+	.site-nav {
+		display: initial;
+	}
+
+	.top-level {
+		display: inline-block;
+		line-height: 47px;
+	}
+
+	.top-level a {
+		display: block;
+		width: 100%;
+		padding: 0 1.8em;
+		transition: ease 0.2s;
+		margin: 0;
+	}
+
+	.top-level-open a {
+		background: #072704;
+	}
+
+	.top-level li a:hover {
+		background: #021400;
+	}
+
+	.top-level a,
+	.event-info li a {
+		border-bottom: none;
+	}
+
+	.top-level ul {
+		background: #072704;
+		margin: 0;
+		padding: 0;
+		margin-left: 0;
+		position: absolute;
+		display: none;
+		list-style-type: none;
+	}
+
+	.second-level {
+		display: block !important;
 	}
 }
 
