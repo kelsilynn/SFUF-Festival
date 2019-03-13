@@ -15,7 +15,7 @@ function checkSize(){
 		heroZoom();
 		dropDownToggle();
 	} else {
-		$('header').css('background-image', 'none');
+		$('header').css('background-image', 'auto 100%');
 	}
 }
 
