@@ -15,7 +15,7 @@ function checkSize(){
 		heroZoom();
 		dropDownToggle();
 	} else {
-		$('.health-header').css('background-size', 'auto 100%');
+		$('header').css('background-size', 'auto 100%');
 	}
 }
 
