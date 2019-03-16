@@ -10,10 +10,12 @@ $(document).ready(function() {
 
 //Function to the css rule
 function checkSize(){
-	if ($(".footer-bg").css("background-size") == "contain"){
+	if ($('.footer-bg').css('background-size') == 'contain'){
 		$('header').css('background-image', 'inherit')
 		heroZoom();
 		dropDownToggle();
+	} else if ($('.footer-bg').css('background-size') == '150%'){
+		$('header').css('background-size', '100% auto');
 	} else {
 		$('header').css('background-size', 'auto 100%');
 	}
