@@ -14,8 +14,6 @@ function checkSize(){
 		$('header').css('background-image', 'inherit')
 		heroZoom();
 		dropDownToggle();
-	} else if ($('.footer-bg').css('background-size') == '150%'){
-		$('header').css('background-size', '100% auto');
 	} else {
 		$('header').css('background-size', 'auto 100%');
 	}
