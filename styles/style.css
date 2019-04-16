@@ -626,7 +626,8 @@ nav a {
 		margin: 0 auto;
 	}
 
-	.contact-right {
+	.contact-right,
+	.g-map{
 		margin-top: 5%;
 	}
 
