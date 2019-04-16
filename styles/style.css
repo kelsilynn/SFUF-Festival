@@ -68,12 +68,12 @@ body {
 
 .health-body,
 .health-header {
-	background-image: url("../images/health-safety-header.jpg");
+	background-image: url();
 }
 
 .participant-body,
 .participant-header {
-	background-image: url("../images/participant-header.jpg");
+	background-image: url("../images/health-safety-header.jpg");
 }
 
 .vendor-body,
@@ -197,6 +197,7 @@ nav a {
 	font-size: 1.3em;
 	background: rgba(0,0,0,0.5);
 	color: #fff;
+	display: inline-block;
 	font-family: 'Oswald', sans-serif;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -229,7 +230,7 @@ nav a {
 	font-family: 'Raleway', sans-serif;
 	padding-bottom: 3%;
 	background: #000;
-	color: #fff;
+	color: #dcdcdc;
 }
 
 #primary {
@@ -410,13 +411,29 @@ nav a {
 .page-content {
 	background: #000;
 	width: 100%;
-	padding: 10% 2%;
+	padding: 5% 2%;
 	border-bottom: 3px solid #fff;
 }
 
-.page-content p {
+.page-content p,
+.page-content h1 {
 	max-width: 1000px;
-	margin: 0 auto;
+	margin: 2em auto;
+}
+
+.v-title {
+	font-weight: 700;
+	text-indent: 10px;
+	font-size: 1.2em;
+	color: #26854C;
+	border-left: 2px solid #dcdcdc;
+}
+
+.v-btn {
+	margin: 5% auto 0;
+	text-align: center;
+	display: block;
+	width: 50%;
 }
 
 .contact-content {
@@ -428,6 +445,11 @@ nav a {
 .contact-right {
 	flex: 1 50%;
 	padding: 0 2%;
+}
+
+.contact-left p,
+.contact-right p {
+	margin: 2% auto;
 }
 
 .contact-right form {
@@ -482,9 +504,22 @@ nav a {
 }
 
 .contact-info {
-	margin: 0 auto;
+	margin: auto;
 	font-size: 1.2em;
 	max-width: 400px;
+}
+
+.contact-info span {
+	display: inline-block;
+}
+
+.fa-map-marker-alt {
+	vertical-align: top;
+}
+
+.g-map {
+	margin-top: 5%;
+	width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -627,7 +662,7 @@ nav a {
 	}
 
 	.contact-right,
-	.g-map {
+	.g-map{
 		margin-top: 5%;
 	}
 
