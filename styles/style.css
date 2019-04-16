@@ -91,6 +91,11 @@ body {
 	background-image: url("../images/gallery-header.jpg");
 }
 
+.partner-body,
+.partner-header {
+	background-image: url("../images/participant-header.jpg");
+}
+
 .index-header,
 .about-header,
 .contact-header,
@@ -99,7 +104,8 @@ body {
 .participant-header,
 .vendor-header,
 .sponsors-header,
-.gallery-header {
+.gallery-header,
+.partner-header {
 	background-position: center; 
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -520,6 +526,11 @@ nav a {
 .g-map {
 	margin-top: 5%;
 	width: 100%;
+}
+
+.ticket-btn {
+	margin-top: 5%;
+	border-top: 3px solid #fff;
 }
 
 /*--------------------------------------------------------------
